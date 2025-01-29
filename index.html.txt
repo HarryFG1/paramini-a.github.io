@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        img {
+            width: 200px;
+            margin-top: 20px;
+        }
+        .btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn-yes {
+            background-color: #ff4081;
+            color: white;
+        }
+        .btn-no {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentín? 💖</h1>
+    <img src="https://media.tenor.com/uU2V_QPp84YAAAAj/kucing-kitten.gif" alt="Gatitos tiernos">
+    <br>
+    <button class="btn btn-yes" onclick="alert('¡Sabía que dirías que sí! 💕')">Sí</button>
+    <button class="btn btn-no" id="noBtn">No</button>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+        noBtn.addEventListener("mouseover", () => {
+            noBtn.style.position = "absolute";
+            noBtn.style.top = Math.random() * window.innerHeight + "px";
+            noBtn.style.left = Math.random() * window.innerWidth + "px";
+        });
+    </script>
+</body>
+</html>
